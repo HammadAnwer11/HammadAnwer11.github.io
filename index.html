@@ -28,6 +28,19 @@
 </head>
 
 <style>
+
+	* {
+	box-sizing: border-box;
+	}
+
+	#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	}
+
 	body,
 	html {
 		height: 100%;
@@ -47,8 +60,13 @@
 
 	.topleft {
 		position: absolute;
-		top: 0;
-		left: 16px;
+		top: 5%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 30px;
 	}
 
 	.bottomleft {
@@ -63,22 +81,32 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+		font-family: 'Playfair Display', Georgia, serif;
+		font-weight: 400;
+		font-size: 48px !important
 	}
 
 	hr {
 		margin: auto;
 		width: 40%;
 	}
+
 </style>
 
 <body>
-
 	<div class="bgimg">
-		<div class="top-center">
+		<video autoplay muted loop id="myVideo">
+			<source src="https://websites.godaddy.com/categories/v4/videos/raw/video/uA41GmyyG8IMaxXdb" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+		<div class="topleft">
+			<p>ANWERS & CO.<p>
 		</div>
+
 		<div class="middle">
 			<img src="images/Anwars Logo 1x.png">
-			<h1>COMING SOON</h1>
+			<p>Launching Soon</p>
 			<hr>
 			<!-- <p>Insha Allah</p> -->
 		</div>
@@ -88,6 +116,11 @@
 	</div>
 
 	<!-- SCRIPTS -->
+
+	<script>
+		var video = document.getElementById("myVideo");
+	</script>
+
 	<script src="js/jquery-1.12.3.min.js"></script>
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/popper.min.js"></script>
